@@ -24,7 +24,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "first_name",
     "last_name",
     "date_of_birth",
-    "address"
+    "address1",
+    "address2",
+    "city",
+    "state",
+    "country",
+    "zip_code"
 })
 public class Employee {
 
@@ -59,12 +64,52 @@ public class Employee {
     @JsonPropertyDescription("date of birth")
     private String dateOfBirth;
     /**
-     * address
+     * line 1
+     * (Required)
      * 
      */
-    @JsonProperty("address")
-    @JsonPropertyDescription("address")
-    private String address;
+    @JsonProperty("address1")
+    @JsonPropertyDescription("line 1")
+    private String address1;
+    /**
+     * line 2
+     * 
+     */
+    @JsonProperty("address2")
+    @JsonPropertyDescription("line 2")
+    private String address2;
+    /**
+     * city
+     * (Required)
+     * 
+     */
+    @JsonProperty("city")
+    @JsonPropertyDescription("city")
+    private String city;
+    /**
+     * state
+     * (Required)
+     * 
+     */
+    @JsonProperty("state")
+    @JsonPropertyDescription("state")
+    private String state;
+    /**
+     * country
+     * (Required)
+     * 
+     */
+    @JsonProperty("country")
+    @JsonPropertyDescription("country")
+    private String country;
+    /**
+     * zip code
+     * (Required)
+     * 
+     */
+    @JsonProperty("zip_code")
+    @JsonPropertyDescription("zip code")
+    private String zipCode;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -145,21 +190,121 @@ public class Employee {
     }
 
     /**
-     * address
+     * line 1
+     * (Required)
      * 
      */
-    @JsonProperty("address")
-    public String getAddress() {
-        return address;
+    @JsonProperty("address1")
+    public String getAddress1() {
+        return address1;
     }
 
     /**
-     * address
+     * line 1
+     * (Required)
      * 
      */
-    @JsonProperty("address")
-    public void setAddress(String address) {
-        this.address = address;
+    @JsonProperty("address1")
+    public void setAddress1(String address1) {
+        this.address1 = address1;
+    }
+
+    /**
+     * line 2
+     * 
+     */
+    @JsonProperty("address2")
+    public String getAddress2() {
+        return address2;
+    }
+
+    /**
+     * line 2
+     * 
+     */
+    @JsonProperty("address2")
+    public void setAddress2(String address2) {
+        this.address2 = address2;
+    }
+
+    /**
+     * city
+     * (Required)
+     * 
+     */
+    @JsonProperty("city")
+    public String getCity() {
+        return city;
+    }
+
+    /**
+     * city
+     * (Required)
+     * 
+     */
+    @JsonProperty("city")
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    /**
+     * state
+     * (Required)
+     * 
+     */
+    @JsonProperty("state")
+    public String getState() {
+        return state;
+    }
+
+    /**
+     * state
+     * (Required)
+     * 
+     */
+    @JsonProperty("state")
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    /**
+     * country
+     * (Required)
+     * 
+     */
+    @JsonProperty("country")
+    public String getCountry() {
+        return country;
+    }
+
+    /**
+     * country
+     * (Required)
+     * 
+     */
+    @JsonProperty("country")
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    /**
+     * zip code
+     * (Required)
+     * 
+     */
+    @JsonProperty("zip_code")
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    /**
+     * zip code
+     * (Required)
+     * 
+     */
+    @JsonProperty("zip_code")
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
     @JsonAnyGetter
@@ -192,9 +337,29 @@ public class Employee {
         sb.append('=');
         sb.append(((this.dateOfBirth == null)?"<null>":this.dateOfBirth));
         sb.append(',');
-        sb.append("address");
+        sb.append("address1");
         sb.append('=');
-        sb.append(((this.address == null)?"<null>":this.address));
+        sb.append(((this.address1 == null)?"<null>":this.address1));
+        sb.append(',');
+        sb.append("address2");
+        sb.append('=');
+        sb.append(((this.address2 == null)?"<null>":this.address2));
+        sb.append(',');
+        sb.append("city");
+        sb.append('=');
+        sb.append(((this.city == null)?"<null>":this.city));
+        sb.append(',');
+        sb.append("state");
+        sb.append('=');
+        sb.append(((this.state == null)?"<null>":this.state));
+        sb.append(',');
+        sb.append("country");
+        sb.append('=');
+        sb.append(((this.country == null)?"<null>":this.country));
+        sb.append(',');
+        sb.append("zipCode");
+        sb.append('=');
+        sb.append(((this.zipCode == null)?"<null>":this.zipCode));
         sb.append(',');
         sb.append("additionalProperties");
         sb.append('=');
